@@ -5,9 +5,10 @@
 [Epicodus](https://www.epicodus.com/) > [React](https://www.learnhowtoprogram.com/react) > [Week 2, React Fundamentals](https://www.learnhowtoprogram.com/react/react-fundamentals)  
 \
 Date created: 04/17/2021
+Updated: 04/20/2021
 
 ## Authors and Contributors
-Authored by: Micah L. Olson
+Authored by: Ash Porter, Micah L. Olson
 
 ## Description
 _React > React Fundamentals_  
@@ -33,11 +34,12 @@ The goal of this project is to learn how to build a basic React application that
 * git
 
 ## Component Diagram
-<img src="./public/component-diagram.png" width="40%"/>
+<img src="./public/help-queue-diagram.jpeg" width="90%"/>
 
 ## License
 [GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
-Copyright &copy; 2021 Micah L. Olson
+Copyright &copy; 2021 Ash Porter, Micah L. Olson
 
 ## Contact
-micah.olson@protonmail.com
+Micah Olson micah.olson@protonmail.com  
+Ash Porter porter.ashley13@gmail.com
