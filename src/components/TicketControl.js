@@ -23,7 +23,7 @@ class TicketControl extends React.Component {
     this.setState({
       mainTicketList: newMainTicketList, 
       formVisibleOnPage: false
-    })
+    });
   }
 
   render() {
