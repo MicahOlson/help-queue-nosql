@@ -1,6 +1,7 @@
-import React from "react";
-import NewTicketForm from "./NewTicketForm";
-import TicketList from "./TicketList";
+import React from 'react';
+import NewTicketForm from './NewTicketForm';
+import TicketList from './TicketList';
+import TicketDetail from  './TicketDetail';
 
 class TicketControl extends React.Component {
 
@@ -35,11 +36,14 @@ class TicketControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.formVisibleOnPage) {
+    if (this.state.selectedTicket != null) {
+      currentlyVisibleState = <TicketDetail ticket={this.state.selectedTicket} />
+      buttonText = "Return to Ticket List";
+    } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewTicketForm onNewTicketCreation={this.handleAddingNewTicketToList} />
       buttonText = "Return to Ticket List";
     } else {
-      currentlyVisibleState = <TicketList ticketList={this.state.mainTicketList} />
+      currentlyVisibleState = <TicketList ticketList={this.state.mainTicketList} onTicketSelection={this.handleChangingSelectedTicket} />
       buttonText = "Add Ticket";
     }
     return (
