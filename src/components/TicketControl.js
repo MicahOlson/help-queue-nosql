@@ -58,9 +58,9 @@ class TicketControl extends React.Component {
 
   handleEditingTicketInList = (ticketToEdit) => {
     const editedMainTicketList = 
-      this.state.mainTicketList.
-      filter(ticket => ticket.id !== this.state.selectedTicket.id).
-      concat(ticketToEdit);
+      this.state.mainTicketList
+      .filter(ticket => ticket.id !== this.state.selectedTicket.id)
+      .concat(ticketToEdit);
     this.setState({
       mainTicketList: editedMainTicketList,
       editing: false,
@@ -87,10 +87,17 @@ class TicketControl extends React.Component {
         />
       buttonText = "Return to Ticket List";
     } else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewTicketForm onNewTicketCreation={this.handleAddingNewTicketToList} />
+      currentlyVisibleState = 
+        <NewTicketForm 
+          onNewTicketCreation={this.handleAddingNewTicketToList} 
+        />
       buttonText = "Return to Ticket List";
     } else {
-      currentlyVisibleState = <TicketList ticketList={this.state.mainTicketList} onTicketSelection={this.handleChangingSelectedTicket} />
+      currentlyVisibleState = 
+        <TicketList 
+          ticketList={this.state.mainTicketList} 
+          onTicketSelection={this.handleChangingSelectedTicket} 
+        />
       buttonText = "Add Ticket";
     }
     return (
@@ -100,7 +107,6 @@ class TicketControl extends React.Component {
       </>
     );
   }
-
 }
 
 export default TicketControl;
