@@ -124,12 +124,12 @@ class TicketControl extends React.Component {
 }
 
 TicketControl.propTypes = {
-  masterTicketList: PropTypes.object
+  mainTicketList: PropTypes.object
 };
 
 const mapStateToProps = state => {
   return {
-    masterTicketList: state
+    mainTicketList: state
   }
 };
 
