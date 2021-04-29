@@ -2,7 +2,7 @@
 
 ### _This project was created solely for the education of the author(s) and is not in a complete or portfolio-ready state. It should not be considered representative of professional work._
 \
-[Epicodus](https://www.epicodus.com/) > [React](https://www.learnhowtoprogram.com/react) > [Week 3, React with Redux](https://www.learnhowtoprogram.com/react/react-with-redux/react-with-redux-objectives)  
+[Epicodus](https://www.epicodus.com/) > [Ruby and React](https://www.learnhowtoprogram.com/tracks/ruby-and-react) > [React](https://www.learnhowtoprogram.com/react) > [Week 3, React with Redux](https://www.learnhowtoprogram.com/react/react-with-redux/react-with-redux-objectives)  
 \
 Date created: 4/25/2021  
 
