@@ -2,29 +2,29 @@
 
 ### _This project was created solely for the education of the author(s) and is not in a complete or portfolio-ready state. It should not be considered representative of professional work._
 \
-[Epicodus](https://www.epicodus.com/) > [React](https://www.learnhowtoprogram.com/react) > [Week 2, React Fundamentals](https://www.learnhowtoprogram.com/react/react-fundamentals)  
+[Epicodus](https://www.epicodus.com/) > [React](https://www.learnhowtoprogram.com/react) > [Week 3, React with Redux](https://www.learnhowtoprogram.com/react/react-with-redux/react-with-redux-objectives)  
 \
-Date created: 4/17/2021  
-Last updated: 4/22/2021
+Date created: 4/25/2021  
 
 ## Authors and Contributors
 Authored by: Micah L. Olson  
-Contributions by: Ash Porter
 
 ## Description
-_React > React Fundamentals_  
-The goal of this project is to learn how to build a basic React application that uses local and shared state. Concepts include:
-* Using `create-react-app`, a command line interface for creating the skeleton of a React application;
-* Using **JSX** (styled JavaScript), a combination of JavaScript and HTML, to build our components;
-* Building both **functional** and **class components**;
-* Using **props** and **PropTypes**;
-* Adding **local** and **shared state** to a basic React application;
-* And other important concepts such as **binding functions**, **undirectional data flow**, reusing components, and passing data through **callbacks**.
+_React > React with Redux_  
+The goal of this project is to learn to use Redux, a library that can manage shared state in React applications. Covered topics include:
+* The basics of Redux, including the store and reducers
+* Creating, combining and splitting reducers
+* Testing reducers with Jest
+* Combining React and Redux using React Redux
+* Using action creators and constants
+* Component lifecycle methods
 
 ## Technologies Used
 * React
+* Redux
 * JavaScript
 * JSX
+* Jest
 * HTML
 * CSS
 * Node.js
