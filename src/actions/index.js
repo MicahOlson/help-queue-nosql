@@ -18,4 +18,10 @@ export const addTicket = (ticket) => {
     issue: issue,
     id: id
   }
-}
+};
+
+export const updateTime = (id, formattedWaitTime) => ({
+  type: c.UPDATE_TIME,
+  id: id,
+  formattedWaitTime: formattedWaitTime
+});
