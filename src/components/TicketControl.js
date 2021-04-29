@@ -1,13 +1,12 @@
 import React from 'react';
 import NewTicketForm from './NewTicketForm';
 import TicketList from './TicketList';
-import TicketDetail from  './TicketDetail';
+import TicketDetail from './TicketDetail';
 import EditTicketForm from './EditTicketForm';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 class TicketControl extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -57,14 +56,13 @@ class TicketControl extends React.Component {
     const { dispatch } = this.props;
     const action = {
       type: 'DELETE_TICKET',
-      id: id
+      id: id,
     }
     dispatch(action);
     this.setState({selectedTicket: null});
   }
 
   handleEditClick = () => {
-    console.log("handleEditClick reached!");
     this.setState({editing: true});
   }
 
@@ -91,31 +89,31 @@ class TicketControl extends React.Component {
     if (this.state.editing) {
       currentlyVisibleState = 
         <EditTicketForm 
-          ticket={this.state.selectedTicket} 
-          onEditTicket={this.handleEditingTicketInList}
+          ticket = {this.state.selectedTicket}
+          onEditTicket = {this.handleEditingTicketInList}
         />
-      buttonText = "Return to Ticket List";
+      buttonText = "Return to Ticket List"
     } else if (this.state.selectedTicket != null) {
-      currentlyVisibleState = 
-        <TicketDetail 
-          ticket={this.state.selectedTicket} 
-          onClickingDelete={this.handleDeletingTicket}
-          onClickingEdit={this.handleEditClick}
-        />
-      buttonText = "Return to Ticket List";
+      currentlyVisibleState =
+      <TicketDetail
+        ticket={this.state.selectedTicket}
+        onClickingDelete={this.handleDeletingTicket}
+        onClickingEdit={this.handleEditClick}
+      />
+      buttonText = "Return to Ticket List"
     } else if (this.props.formVisibleOnPage) {
       currentlyVisibleState = 
         <NewTicketForm 
-          onNewTicketCreation={this.handleAddingNewTicketToList} 
+          onNewTicketCreation={this.handleAddingNewTicketToList}
         />
-      buttonText = "Return to Ticket List";
+      buttonText = "Return to Ticket List"
     } else {
       currentlyVisibleState = 
         <TicketList 
           ticketList={this.props.mainTicketList} 
           onTicketSelection={this.handleChangingSelectedTicket} 
         />
-      buttonText = "Add Ticket";
+      buttonText = "Add Ticket"
     }
     return (
       <>
@@ -128,13 +126,13 @@ class TicketControl extends React.Component {
 
 TicketControl.propTypes = {
   mainTicketList: PropTypes.object,
-  formVisibleOnPage: PropTypes.bool
+  formVisibleOnPage: PropTypes.bool,
 };
 
 const mapStateToProps = state => {
   return {
     mainTicketList: state.mainTicketList,
-    formVisibleOnPage: state.formVisibleOnPage
+    formVisibleOnPage: state.formVisibleOnPage,
   }
 };
 

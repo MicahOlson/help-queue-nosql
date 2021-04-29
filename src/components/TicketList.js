@@ -6,8 +6,8 @@ function TicketList(props) {
   return (
     <>
       <hr/>
-      {Object.values(props.ticketList).map((ticket) => 
-        <Ticket 
+      {Object.values(props.ticketList).map((ticket) =>
+        <Ticket
           whenTicketClicked={props.onTicketSelection}
           names={ticket.names}
           location={ticket.location}
