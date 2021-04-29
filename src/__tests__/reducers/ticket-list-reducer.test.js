@@ -32,4 +32,33 @@ describe('ticketListReducer', () => {
       }
     });
   });
+
+  test('Should successfully update ticket data on masterTicketList', () => {
+    const { names, location, issue, id } = ticketData;
+    action = {
+      type: 'ADD_TICKET',
+      names: names,
+      location: location,
+      issue: issue,
+      id: id
+    };
+
+    let updateAction = {
+      type: 'ADD_TICKET',
+      names: names,
+      location: location,
+      id: id,
+      issue: 'Redux is working now.'
+    };
+
+    const newTicket = ticketListReducer({}, action);    
+    expect(ticketListReducer(newTicket, updateAction)).toEqual({
+      [id] : {
+        names: names,
+        location: location,
+        issue: 'Redux is working now.',
+        id: id
+      }
+    });
+  });
 });
