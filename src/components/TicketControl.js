@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as a from './../actions';
 import { withFirestore } from 'react-redux-firebase';
+import ReusableForm from './ReusableForm';
 
 class TicketControl extends React.Component {
   constructor(props) {
@@ -28,14 +29,15 @@ class TicketControl extends React.Component {
     clearInterval(this.waitTimeUpdateTimer);
   }
 
-  // updateTicketElapsedWaitTime = () => {
-  //   const { dispatch } = this.props;
-  //   Object.values(this.props.mainTicketList).forEach(ticket => {
-  //     const newFormattedWaitTime = ticket.timeOpen.fromNow(true);
-  //     const action = a.updateTime(ticket.id, newFormattedWaitTime);
-  //     dispatch(action);
-  //   });
-  // }
+// Update to replace mainTicketList with firestore
+  updateTicketElapsedWaitTime = () => {
+    const { dispatch } = this.props;
+    Object.values(this.props.mainTicketList).forEach(ticket => {
+      const newFormattedWaitTime = ticket.timeOpen.fromNow(true);
+      const action = a.updateTime(ticket.id, newFormattedWaitTime);
+      dispatch(action);
+    });
+  }
 
   handleClick = () => {
     if (this.state.selectedTicket != null) {
@@ -111,7 +113,6 @@ class TicketControl extends React.Component {
     } else {
       currentlyVisibleState = 
         <TicketList 
-          // ticketList={this.props.mainTicketList} 
           onTicketSelection={this.handleChangingSelectedTicket} 
         />
       buttonText = "Add Ticket"
@@ -126,7 +127,6 @@ class TicketControl extends React.Component {
 }
 
 TicketControl.propTypes = {
-  // mainTicketList: PropTypes.object,
   formVisibleOnPage: PropTypes.bool,
 };
 
