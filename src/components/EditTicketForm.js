@@ -21,6 +21,7 @@ function EditTicketForm(props) {
   return (
     <>
       <ReusableForm 
+        currentTicket={ticket}
         formSubmissionHandler={handleEditTicketFormSubmission} 
         buttonText="Update Ticket"
       />
